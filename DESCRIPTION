@@ -1,0 +1,25 @@
+Package: RepertoireGraphs
+Title: Graphical Representation of Repertoire Data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Ido",
+           family = "Hasson",
+           role = c("aut", "cre"),
+           email = "idoh@systemsbiomed.org",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: TCR repertoire plotting function.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    stringdist,
+    igraph,
+    reshape2,
+    circlize,
+    stringr,
+    grDevices
