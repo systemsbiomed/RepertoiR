@@ -23,3 +23,5 @@ Imports:
     circlize,
     stringr,
     grDevices
+URL: https://github.com/IdoHassonJ/RepertoireGraphs
+BugReports: https://github.com/IdoHassonJ/RepertoireGraphs/issues
