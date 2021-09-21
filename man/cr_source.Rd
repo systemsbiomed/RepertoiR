@@ -7,7 +7,7 @@
 cr_source(clone1, clone2, ...)
 }
 \arguments{
-\item{clone1}{First vector of sequences, each is a same length string of nucleotide.}
+\item{clone1}{First vector of sequences, string-length is the same for each nucleotide sequence ('A', 'G', 'T', 'C').}
 
 \item{clone2}{Second vector of sequences, same string-length as for the first vector.}
 
@@ -18,11 +18,14 @@ Visualization of Two clones for their convergent recombination (CR) sources. Eac
 }
 \examples{
 nt <- c("A", "G", "C", "T")
+seq_len <- 20
+seq_n <- c(15, 19)
 
-ntseq <- replicate(30, paste0(sample(nt, 15, replace = TRUE), collapse = ""))
-
-c1 <- ntseq[1:17]
-c2 <- ntseq[18:30]
+# Create data
+c1 <- replicate(seq_n[1],
+                paste(sample(nt, seq_len, replace = TRUE), collapse = ''))
+c2 <- replicate(seq_n[2],
+                paste(sample(nt, seq_len, replace = TRUE), collapse = ''))
 
 cr_source(c1, c2)
 

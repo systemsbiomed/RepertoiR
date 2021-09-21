@@ -13,7 +13,7 @@ network(dataset, by, nrow, method, ...)
 
 \item{nrow}{Number of nodes to display. Default is 1000 nodes.}
 
-\item{method}{stringdist method to perform for distance dissimilarity calculation ("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex"). Default is "lv" (Levenshtein distance).}
+\item{method}{stringdist method to perform for distance dissimilarity calculation: "osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex". Default is Levenshtein distance ("lv").}
 
 \item{...}{Any additional arguments needed by the specialized methods.}
 }
@@ -22,23 +22,23 @@ Computes pairwise string distances among repertoire's sequences and visualize si
 }
 \examples{
 
-data <- matrix(rexp(1/2, n=4000), ncol = 4)
 aa <- c('G', 'A', 'V', 'L', 'I', 'P', 'F', 'Y', 'W', 'S',
-        'T', 'N', 'Q', 'C', 'M', 'D', 'E', 'H', 'K', 'R')
-
+'T', 'N', 'Q', 'C', 'M', 'D', 'E', 'H', 'K', 'R')
+data <- matrix(rexp(1/2, n=1000), ncol = 4)
 cons <- sample(aa, 10)
+aavec <- c()
 
-aa_list <- c()
-while(length(aa_list)<nrow(data)) {
+while(length(aavec) < nrow(data)) {
   aaseq <- cons
-  index <- sample(length(aaseq), 3)
-  aaseq[index] <- sample(aa, 3, replace = TRUE)
+  index <- sample(length(aaseq), sample(length(aaseq)/3, 1))
+  aaseq[index] <- sample(aa, length(index), replace = TRUE)
   aaseq <- paste0(aaseq, collapse = "")
-  aa_list <- if (!(aaseq \%in\% aa_list)) append(aa_list, aaseq)
+  aavec <- unique(append(aavec, aaseq))
 }
 
-rownames(data) <- aa_list
-network(data, by = 3, nrow = 500)
+rownames(data) <- aavec
+colnames(data) <- LETTERS[1:ncol(data)]
 
+network(data, by = 3, nrow = 100)
 
 }

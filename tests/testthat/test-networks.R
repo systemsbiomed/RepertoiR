@@ -1,21 +1,20 @@
-test_that("multiplication works", {
-
-    data <- matrix(rexp(1/2, n=4000), ncol = 4)
+test_that("no error has occurred", {
   aa <- c('G', 'A', 'V', 'L', 'I', 'P', 'F', 'Y', 'W', 'S',
           'T', 'N', 'Q', 'C', 'M', 'D', 'E', 'H', 'K', 'R')
-
+  data <- matrix(rexp(1/2, n=1000), ncol = 4)
   cons <- sample(aa, 10)
+  aavec <- c()
 
-  aa_list <- c()
-  while(length(aa_list)<nrow(data)) {
+  while(length(aavec) < nrow(data)) {
     aaseq <- cons
-    index <- sample(length(aaseq), 3)
-    aaseq[index] <- sample(aa, 3, replace = TRUE)
+    index <- sample(length(aaseq), sample(length(aaseq)/3, 1))
+    aaseq[index] <- sample(aa, length(index), replace = TRUE)
     aaseq <- paste0(aaseq, collapse = "")
-    aa_list <- if (!(aaseq %in% aa_list)) append(aa_list, aaseq)
+    aavec <- unique(append(aavec, aaseq))
   }
 
-  rownames(data) <- aa_list
-  network(data, by = 3, nrow = 500)
-  expect_identical("data", "data")
+  rownames(data) <- aavec
+  colnames(data) <- LETTERS[1:ncol(data)]
+  # skip("This test hasn't been written yet")
+  expect_identical(network(data), NULL)
 })

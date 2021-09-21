@@ -1,13 +1,10 @@
-test_that("multiplication works", {
-
-  # default arguments
-  seq_n <- c(5, 9)
-  seq_len <- 10
+test_that("no error has occurred", {
+  nt <- c("A", "G", "C", "T")
+  seq_len <- 20
+  seq_n <- c(15, 19)
   # Create data
-  human_l <- c(); mouse_l <- c()
-  for (i in 1:seq_n[1]) human_l[i] <- paste(sample(c("A", "G", "C", "T"), seq_len, replace = T), collapse = '')
-  for (i in 1:seq_n[2]) mouse_l[i] <- paste(sample(c("A", "G", "C", "T"), seq_len, replace = T), collapse = '')
-
-  cr_source.default(human_l, mouse_l)
-  expect_identical("data", "data")
+  c1 <- replicate(seq_n[1], paste(sample(nt, seq_len, replace = TRUE), collapse = ''))
+  c2 <- replicate(seq_n[2], paste(sample(nt, seq_len, replace = TRUE), collapse = ''))
+  # skip("This test hasn't been written yet")
+  expect_identical(cr_source(c1, c2), NULL)
 })
