@@ -4,12 +4,10 @@
 # RepertoireGraphs
 
 <!-- badges: start -->
-
-[![Travis build
-status](https://travis-ci.com/IdoHassonJ/RepertoireGraphs.svg?branch=main)](https://travis-ci.com/IdoHassonJ/RepertoireGraphs)
 <!-- badges: end -->
 
-The goal of RepertoireGraphs is to… Repertoire Graphical Visualization
+This package provides visualization options of TCR/BCR repertoire
+datasets.
 
 ## Installation
 
@@ -41,13 +39,13 @@ rownames(data) <- seq
 colnames(data) <- LETTERS[seq(ncol(data))]
 
 head(data)
-#>                     A         B        C          D
-#> FWTVCKRMPQ  1.3787700  4.843387 6.206484  0.4850474
-#> INHPWKCEFT 11.7785264  9.198948 1.090124  1.9019068
-#> NQRTGHKDYW  2.3793485 16.613160 4.609377  3.9132916
-#> FCPIQDAHRY  9.4815834  2.744772 2.054159  0.5032794
-#> YSIVMFNDER  0.3059486  7.298837 1.701462 13.8168453
-#> WNPSLYFRCV  0.9662928  6.823992 6.187878  5.9685597
+#>                     A        B         C         D
+#> HLCTPRADIE  0.1864028 3.132790 2.9118531 1.1476071
+#> SQDLGHCNFM  5.1790652 2.490808 4.5123107 8.3769079
+#> KRHVDFYCGI  1.3837080 4.645174 2.9888848 2.3483323
+#> PDITEWRVNS 12.1558195 8.851447 3.1157216 0.5885532
+#> KHVRCGEMSL  6.2795384 2.351688 0.7946035 0.4920479
+#> WCKHSIYATF  3.3369664 0.541102 0.1406660 5.7886058
 ```
 
 Now we can execute sunflower function:
