@@ -41,24 +41,26 @@ rownames(data) <- seq
 colnames(data) <- LETTERS[seq(ncol(data))]
 
 head(data)
-#>                    A         B        C        D
-#> GSKPECVNQI 12.944249 0.9312361 4.214433 1.655875
-#> YVCSGDNWRM  1.464611 0.8165296 0.574519 7.495995
-#> YDFIAHSMKN  3.482440 0.2761332 3.106985 1.401014
-#> QELGWDCIFS 12.541312 1.5449392 7.832853 0.468031
-#> WMERFCNPDY  3.055389 1.5423529 4.863527 3.505666
-#> YTAKLWCPIS  5.210536 3.7179394 3.872300 1.125345
+#>                     A         B        C          D
+#> FWTVCKRMPQ  1.3787700  4.843387 6.206484  0.4850474
+#> INHPWKCEFT 11.7785264  9.198948 1.090124  1.9019068
+#> NQRTGHKDYW  2.3793485 16.613160 4.609377  3.9132916
+#> FCPIQDAHRY  9.4815834  2.744772 2.054159  0.5032794
+#> YSIVMFNDER  0.3059486  7.298837 1.701462 13.8168453
+#> WNPSLYFRCV  0.9662928  6.823992 6.187878  5.9685597
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
+Now we can execute sunflower function:
 
-You can also embed plots, for example:
+``` r
+sunflower(data)
+```
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+More examples are available in package help:
+
+``` r
+?network
+?cr_source
+```
