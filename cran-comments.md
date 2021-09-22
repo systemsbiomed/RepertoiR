@@ -9,10 +9,8 @@ There were no ERRORs or WARNINGs.
 There was 1 NOTE:
 
 * checking CRAN incoming feasibility ... NOTE
-  Maintainer: 'Ido Hasson <idoh@systemsbiomed.org>'
+Maintainer: 'Ido Hasson <idoh@systemsbiomed.org>'
 
-  New submission
-
-
+New submission
 
 * This is a new release.

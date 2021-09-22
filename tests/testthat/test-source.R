@@ -5,6 +5,6 @@ test_that("no error has occurred", {
   # Create data
   c1 <- replicate(seq_n[1], paste(sample(nt, seq_len, replace = TRUE), collapse = ''))
   c2 <- replicate(seq_n[2], paste(sample(nt, seq_len, replace = TRUE), collapse = ''))
-  # skip("This test hasn't been written yet")
+  # Execute function
   expect_identical(cr_source(c1, c2), NULL)
 })

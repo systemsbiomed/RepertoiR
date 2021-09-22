@@ -7,7 +7,8 @@
 \method{network}{default}(dataset, by = 1, nrow = 1000, method = "lv", ...)
 }
 \arguments{
-\item{dataset}{A matrix or a data frame includes row names which are used as the compared sequences. Data set's numeric values determine node-size.}
+\item{dataset}{A matrix or a data frame includes row names which are used as
+the compared sequences. Data set's numeric values determine node-size.}
 
 \item{by}{Index of column to set its values as node-size. first column is default (1).}
 
@@ -18,18 +19,21 @@
 \item{...}{Any additional arguments needed by the specialized methods.}
 }
 \description{
-Computes pairwise string distances among repertoire's sequences and visualize similar pairs as connected nodes, each sized by its frequency.
+Computes pairwise string distances among repertoire's sequences
+and visualize similar pairs as connected nodes, each sized by its frequency.
 }
 \examples{
-aa <- c('G', 'A', 'V', 'L', 'I', 'P', 'F', 'Y', 'W', 'S',
-'T', 'N', 'Q', 'C', 'M', 'D', 'E', 'H', 'K', 'R')
-data <- matrix(rexp(1/2, n=1000), ncol = 4)
+aa <- c(
+  "G", "A", "V", "L", "I", "P", "F", "Y", "W", "S",
+  "T", "N", "Q", "C", "M", "D", "E", "H", "K", "R"
+)
+data <- matrix(rexp(1 / 2, n = 1000), ncol = 4)
 cons <- sample(aa, 10)
 aavec <- c()
 
-while(length(aavec) < nrow(data)) {
+while (length(aavec) < nrow(data)) {
   aaseq <- cons
-  index <- sample(length(aaseq), sample(length(aaseq)/3, 1))
+  index <- sample(length(aaseq), sample(length(aaseq) / 3, 1))
   aaseq[index] <- sample(aa, length(index), replace = TRUE)
   aaseq <- paste0(aaseq, collapse = "")
   aavec <- unique(append(aavec, aaseq))
@@ -39,5 +43,4 @@ rownames(data) <- aavec
 colnames(data) <- LETTERS[1:ncol(data)]
 
 network(data)
-
 }

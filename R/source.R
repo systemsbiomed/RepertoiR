@@ -60,8 +60,8 @@ cr_source.default <- function(clone1, clone2,...) {
   aa_name <- "aa"
   sourse_name <- c("A", "B")
 
-  names(ntseq) <- c(paste0(sourse_name[1], 1:length(clone1)),
-                    paste0(sourse_name[2], 1:length(clone2)))
+  names(ntseq) <- c(paste0(sourse_name[1], seq(length(clone1))),
+                    paste0(sourse_name[2], seq(length(clone2))))
   sectors <- c(names(ntseq), aa_name)
   # Create x-axis range for each sector, 0-1 for each
   axes <- matrix(rep(c(0, 1), each = n), ncol = 2)

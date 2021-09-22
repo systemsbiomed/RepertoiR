@@ -1,13 +1,11 @@
 Package: RepertoireGraphs
 Title: Repertoire Graphical Visualization
-Version: 0.1.0
+Version: 0.0.1
 Authors@R: c(person(given = "Ido",
                    family = "Hasson",
                    role = c("aut", "cre"),
                    email = "idoh@systemsbiomed.org",
                    comment = c(ORCID = "0000-0001-8382-5638")))
-Author: Ido Hasson <idoh@systemsbiomed.org>
-Maintainer: Ido Hasson <idoh@systemsbiomed.org>
 Description: Repertoire plotting functions.
 License: MIT + file LICENSE
 Encoding: UTF-8

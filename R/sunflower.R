@@ -46,16 +46,16 @@ sunflower.default <- function(dataset, ...) {
   l <- matrix(0, ncol = 2, nrow = vcount(g))
 
   # Vertices ids vector of each rings
-  vi <- 1:vcount(g)
+  vi <- seq(vcount(g))
   vi <- ceiling(vi/nrow(mat))
-  vi <- split(1:vcount(g), vi)
+  vi <- split(seq(vcount(g)), vi)
 
   # Build layout
-  for (i in 1:ncol(mat)) l <- l + layout_in_circle(g, order = vi[[i]]) * i/ncol(mat)
+  for (i in seq(ncol(mat))) l <- l + layout_in_circle(g, order = vi[[i]]) * i/ncol(mat)
 
   color <- rainbow(ncol(mat), alpha=.5)
 
   V(g)$size <- as.vector(mat)
   V(g)$color <- rep(color, each = nrow(mat), length.out=vcount(g))
-  plot(g, layout = l, vertex.label=NA, rescale = F)
+  plot(g, layout = l, vertex.label=NA, rescale = FALSE)
 }
