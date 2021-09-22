@@ -7,12 +7,12 @@ Authors@R:
            role = c("aut", "cre"),
            email = "idoh@systemsbiomed.org",
            comment = c(ORCID = "0000-0001-8382-5638"))
-Description: This package provides visualization options of TCR/BCR
-    repertoire datasets including comparison of exon count among samples,
-    network of similar exon sequences and convergent recombination source
-    presentation between species. Currently TCR/BCR repertoire analysis is
-    in early stage development, hence new practices for data examination
-    and assessment are crucial.
+Description: Provides visualization options of repertoire datasets
+    including comparison of sequence frequency among samples, network of
+    similar sequences and convergent recombination source presentation
+    between species. Currently repertoire analysis is in early stage
+    development, hence new practices for data examination and assessment
+    are crucial.
 License: MIT + file LICENSE
 URL: https://github.com/IdoHassonJ/RepertoireGraphs
 BugReports: https://github.com/IdoHassonJ/RepertoireGraphs/issues
