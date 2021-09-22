@@ -9,7 +9,7 @@
 status](https://travis-ci.com/IdoHassonJ/RepertoireGraphs.svg?branch=main)](https://travis-ci.com/IdoHassonJ/RepertoireGraphs)
 <!-- badges: end -->
 
-The goal of RepertoireGraphs is to… Repertoire Graphical Visualization
+This package provides visualization options of TCR/BCR repertoire datasets.
 
 ## Installation
 
