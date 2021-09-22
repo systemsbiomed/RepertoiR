@@ -1,8 +1,8 @@
 test_that("no error has occurred", {
   # Create data
-  data <- matrix(rexp(1/2, n=1000), ncol = 4)
-  aa <- c('G', 'A', 'V', 'L', 'I', 'P', 'F', 'Y', 'W', 'S',
-          'T', 'N', 'Q', 'C', 'M', 'D', 'E', 'H', 'K', 'R')
+  data <- matrix(rexp(1/2, n=8000), ncol = 4)
+  aa <- c("G", "A", "V", "L", "I", "P", "F", "Y", "W", "S",
+          "T", "N", "Q", "C", "M", "D", "E", "H", "K", "R")
   cons <- sample(aa, 10)
   # Generate similar sequences
   aavec <- c()

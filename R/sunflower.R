@@ -1,10 +1,13 @@
 #' Sunflower repertoire graph
 #'
-#' @description Sequence frequency visualization among samples, displayed as rings of nodes inside each other.
+#' @description Sequence frequency visualization among samples, displayed as
+#' rings of nodes inside each other.
 #'
 #' @param dataset Input object: a matrix or a data frame.
 #'
-#' First column is located as the outer ring, the second is right after and so on to the last column as the inmost ring. Cell's numeric value determines node size.
+#' First column is located as the outer ring, the second is right after and so
+#' on to the last column as the inmost ring. Cell's numeric value determines
+#' node size.
 #'
 #' @param ... Any other arguments.
 #'
@@ -21,11 +24,14 @@ sunflower <- function (dataset, ...){
 
 #' Default graph
 #'
-#' @description Default visualization of sequence frequencies among samples as rings inside each other.
+#' @description Default visualization of sequence frequencies among samples as
+#' rings inside each other.
 #'
 #' @param dataset Input object: a matrix or a data frame.
 #'
-#' First column is located as the outer ring, the second is right after and so on to the last column as the inmost ring. Cell's numeric value determines node size.
+#' First column is located as the outer ring, the second is right after and so
+#' on to the last column as the inmost ring. Cell's numeric value determines
+#' node size.
 #'
 #' @param ... Any other arguments.
 #'
@@ -51,7 +57,8 @@ sunflower.default <- function(dataset, ...) {
   vi <- split(seq(vcount(g)), vi)
 
   # Build layout
-  for (i in seq(ncol(mat))) l <- l + layout_in_circle(g, order = vi[[i]]) * i/ncol(mat)
+  for (i in seq(ncol(mat)))
+    l <- l + layout_in_circle(g, order = vi[[i]]) * i/ncol(mat)
 
   color <- rainbow(ncol(mat), alpha=.5)
 

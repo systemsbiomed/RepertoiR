@@ -53,9 +53,12 @@ network <- function(dataset, by, nrow, method, ...) {
 #'
 #'
 #'
-#' @param by Index of column to set its values as node-size. first column is default (1).
+#' @param by Index of column to set its values as node-size. first column is
+#' default (1).
 #' @param nrow Number of nodes to display. Default is 1000 nodes.
-#' @param method stringdist method to perform for distance dissimilarity calculation: "osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex". Default is Levenshtein distance ("lv").
+#' @param method stringdist method to perform for distance dissimilarity
+#' calculation: "osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine",
+#' "jaccard", "jw", "soundex". Default is Levenshtein distance ("lv").
 #' @param ... Any additional arguments needed by the specialized methods.
 #'
 #' @import utils
@@ -91,8 +94,11 @@ network.default <- function(dataset, by = 1, nrow = 1000, method = "lv", ...) {
   dataset <- as.table(dataset)
   # Check arguments
   by <- ifelse(ncol(dataset) < as.numeric(by), ncol(dataset), as.numeric(by))
-  nrow <- ifelse(nrow(dataset) < as.numeric(nrow), nrow(dataset), as.numeric(nrow))
-  method <- ifelse(!method %in% c("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex"), "lv", as.character(method))
+  nrow <- as.numeric(nrow)
+  nrow <- ifelse(nrow(dataset) < nrow, nrow(dataset), nrow)
+  method <- ifelse(!method %in% c("osa", "lv", "dl", "hamming", "lcs", "qgram",
+                                  "cosine", "jaccard", "jw", "soundex"), "lv",
+                   as.character(method))
   # Order by sample index
   dataset <- dataset[order(dataset[, by], decreasing = TRUE), ]
   mat <- as.matrix(dataset)
@@ -107,10 +113,11 @@ network.default <- function(dataset, by = 1, nrow = 1000, method = "lv", ...) {
   pairs <- unique(melt(dist_d, varnames = c("seq1", "seq2"), na.rm = TRUE))
   pairs <- pairs[!is.na(pairs$value), ]
   # Generate the graph
-  g <- simplify(graph.data.frame(d = pairs, vertices = rownames(mat), directed = FALSE))
+  g <- simplify(graph.data.frame(pairs, vertices=rownames(mat), directed=FALSE))
   V(g)$size <- as.vector(mat[, by])
   lou <- cluster_louvain(g)
   l <- layout_with_fr(g)
-  V(g)$color <- rainbow(length(unique(lou$membership)), alpha = 0.5)[lou$membership]
-  plot(g, layout = l, vertex.label = NA, edge.arrow.size = 0, edge.color = "gray")
+  V(g)$color <- rainbow(length(unique(lou$membership)),
+                        alpha = 0.5)[lou$membership]
+  plot(g, layout=l, vertex.label=NA, edge.arrow.size=0, edge.color="gray")
 }

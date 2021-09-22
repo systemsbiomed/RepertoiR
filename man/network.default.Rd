@@ -10,11 +10,14 @@
 \item{dataset}{A matrix or a data frame includes row names which are used as
 the compared sequences. Data set's numeric values determine node-size.}
 
-\item{by}{Index of column to set its values as node-size. first column is default (1).}
+\item{by}{Index of column to set its values as node-size. first column is
+default (1).}
 
 \item{nrow}{Number of nodes to display. Default is 1000 nodes.}
 
-\item{method}{stringdist method to perform for distance dissimilarity calculation: "osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex". Default is Levenshtein distance ("lv").}
+\item{method}{stringdist method to perform for distance dissimilarity
+calculation: "osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine",
+"jaccard", "jw", "soundex". Default is Levenshtein distance ("lv").}
 
 \item{...}{Any additional arguments needed by the specialized methods.}
 }
