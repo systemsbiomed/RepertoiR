@@ -9,12 +9,15 @@ sunflower(dataset, ...)
 \arguments{
 \item{dataset}{Input object: a matrix or a data frame.
 
-First column is located as the outer ring, the second is right after and so on to the last column as the inmost ring. Cell's numeric value determines node size.}
+First column is located as the outer ring, the second is right after and so
+on to the last column as the inmost ring. Cell's numeric value determines
+node size.}
 
 \item{...}{Any other arguments.}
 }
 \description{
-Sequence frequency visualization among samples, displayed as rings of nodes inside each other.
+Sequence frequency visualization among samples, displayed as
+rings of nodes inside each other.
 }
 \examples{
 data <- matrix(rexp(400,1/4), ncol = 4)

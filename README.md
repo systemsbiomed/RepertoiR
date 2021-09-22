@@ -4,47 +4,50 @@
 # RepertoireGraphs
 
 <!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.com/IdoHassonJ/RepertoireGraphs.svg?branch=main)](https://travis-ci.com/IdoHassonJ/RepertoireGraphs)
 <!-- badges: end -->
 
-The goal of RepertoireGraphs is to …
+The goal of RepertoireGraphs is to… Repertoire Graphical Visualization
 
 ## Installation
 
-You can install the released version of RepertoireGraphs from
-[CRAN](https://CRAN.R-project.org) with:
+For RepertoireGraphs installation execute the following command:
 
 ``` r
 install.packages("RepertoireGraphs")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+or
 
 ``` r
-# install.packages("devtools")
+library(devtools)
 devtools::install_github("IdoHassonJ/RepertoireGraphs")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Load the package and create TCR/BCR dataset with arbitrary sequences &
+values:
 
 ``` r
 library(RepertoireGraphs)
-## basic example code
-```
+data <- matrix(rexp(400,1/4), ncol = 4)
+aa <- c("G", "A", "V", "L", "I", "P", "F", "Y", "W", "S",
+        "T", "N", "Q", "C", "M", "D", "E", "H", "K", "R") # amino acid symbols
+seq <- replicate(nrow(data), paste0(sample(aa, 10), collapse = ""))
+rownames(data) <- seq
+colnames(data) <- LETTERS[seq(ncol(data))]
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+head(data)
+#>                    A         B        C        D
+#> GSKPECVNQI 12.944249 0.9312361 4.214433 1.655875
+#> YVCSGDNWRM  1.464611 0.8165296 0.574519 7.495995
+#> YDFIAHSMKN  3.482440 0.2761332 3.106985 1.401014
+#> QELGWDCIFS 12.541312 1.5449392 7.832853 0.468031
+#> WMERFCNPDY  3.055389 1.5423529 4.863527 3.505666
+#> YTAKLWCPIS  5.210536 3.7179394 3.872300 1.125345
 ```
 
 You’ll still need to render `README.Rmd` regularly, to keep `README.md`

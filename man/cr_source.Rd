@@ -7,14 +7,20 @@
 cr_source(clone1, clone2, ...)
 }
 \arguments{
-\item{clone1}{First vector of sequences, string-length is the same for each nucleotide sequence ('A', 'G', 'T', 'C').}
+\item{clone1}{First vector of sequences, string-length is the same for each
+nucleotide sequence ('A', 'G', 'T', 'C').}
 
-\item{clone2}{Second vector of sequences, same string-length as for the first vector.}
+\item{clone2}{Second vector of sequences, same string-length as for the
+first vector.}
 
 \item{...}{Any other arguments.}
 }
 \description{
-Visualization of Two clones for their convergent recombination (CR) sources. Each sequence (NT) is represented as a colored bar (red for A, yellow for G, blue for T and green for C) linked to its translated amino acid sequence by a colored line, red for the first clone and blue for the second.
+Visualization of Two clones for their convergent recombination
+(CR) sources. Each sequence (NT) is represented as a colored bar (red for A,
+yellow for G, blue for T and green for C) linked to its translated amino
+acid sequence by a colored line, red for the first clone and blue for the
+second.
 }
 \examples{
 nt <- c("A", "G", "C", "T")
