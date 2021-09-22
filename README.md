@@ -4,58 +4,63 @@
 # RepertoireGraphs
 
 <!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.com/IdoHassonJ/RepertoireGraphs.svg?branch=main)](https://travis-ci.com/IdoHassonJ/RepertoireGraphs)
 <!-- badges: end -->
 
-The goal of RepertoireGraphs is to …
+The goal of RepertoireGraphs is to… Repertoire Graphical Visualization
 
 ## Installation
 
-You can install the released version of RepertoireGraphs from
-[CRAN](https://CRAN.R-project.org) with:
+For RepertoireGraphs installation execute the following command:
 
 ``` r
 install.packages("RepertoireGraphs")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+or
 
 ``` r
-# install.packages("devtools")
+library(devtools)
 devtools::install_github("IdoHassonJ/RepertoireGraphs")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Load the package and create TCR/BCR dataset with arbitrary sequences &
+values:
 
 ``` r
 library(RepertoireGraphs)
-## basic example code
+data <- matrix(rexp(400,1/4), ncol = 4)
+aa <- c("G", "A", "V", "L", "I", "P", "F", "Y", "W", "S",
+        "T", "N", "Q", "C", "M", "D", "E", "H", "K", "R") # amino acid symbols
+seq <- replicate(nrow(data), paste0(sample(aa, 10), collapse = ""))
+rownames(data) <- seq
+colnames(data) <- LETTERS[seq(ncol(data))]
+
+head(data)
+#>                     A         B        C          D
+#> FWTVCKRMPQ  1.3787700  4.843387 6.206484  0.4850474
+#> INHPWKCEFT 11.7785264  9.198948 1.090124  1.9019068
+#> NQRTGHKDYW  2.3793485 16.613160 4.609377  3.9132916
+#> FCPIQDAHRY  9.4815834  2.744772 2.054159  0.5032794
+#> YSIVMFNDER  0.3059486  7.298837 1.701462 13.8168453
+#> WNPSLYFRCV  0.9662928  6.823992 6.187878  5.9685597
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+Now we can execute sunflower function:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+sunflower(data)
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-You can also embed plots, for example:
+More examples are available in package help:
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+?network
+?cr_source
+```
