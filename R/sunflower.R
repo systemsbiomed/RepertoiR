@@ -13,6 +13,8 @@
 #'
 #' @export
 #'
+#' @return No return value.
+#'
 #' @examples
 #' data <- matrix(rexp(400,1/4), ncol = 4)
 #' sunflower(data)
@@ -40,6 +42,8 @@ sunflower <- function (dataset, ...){
 #' @importFrom grDevices rainbow
 #'
 #' @export
+#'
+#' @return No return value.
 #'
 #' @examples
 #' data <- matrix(rexp(400,1/4), ncol = 4)

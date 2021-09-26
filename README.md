@@ -4,6 +4,8 @@
 # RepertoireGraphs
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/R-CMD-check/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
 <!-- badges: end -->
 
 This package provides visualization options of TCR/BCR repertoire
@@ -39,13 +41,13 @@ rownames(data) <- seq
 colnames(data) <- LETTERS[seq(ncol(data))]
 
 head(data)
-#>                     A        B         C         D
-#> HLCTPRADIE  0.1864028 3.132790 2.9118531 1.1476071
-#> SQDLGHCNFM  5.1790652 2.490808 4.5123107 8.3769079
-#> KRHVDFYCGI  1.3837080 4.645174 2.9888848 2.3483323
-#> PDITEWRVNS 12.1558195 8.851447 3.1157216 0.5885532
-#> KHVRCGEMSL  6.2795384 2.351688 0.7946035 0.4920479
-#> WCKHSIYATF  3.3369664 0.541102 0.1406660 5.7886058
+#>                     A         B         C           D
+#> GEWACDILMP  0.9960813 0.6650530  4.418319  0.73922065
+#> MKGHLTDWCA  4.4845792 2.4032516  1.453428  3.17342473
+#> DPVSNITMEF  9.6958134 0.9101618  2.325893  0.05546815
+#> MEAWVTRHSP 11.8190387 0.4985074  1.605471 21.94881172
+#> NIKSEHPLTY  5.8258307 1.3677063 26.471218  0.59619467
+#> WNAMFQEVKG  1.9115071 1.8200938  2.770713  3.53339572
 ```
 
 Now we can execute sunflower function:

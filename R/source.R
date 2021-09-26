@@ -14,6 +14,8 @@
 #'
 #' @export
 #'
+#' @return No return value.
+#'
 #' @examples
 #' nt <- c("A", "G", "C", "T")
 #' seq_len <- 20
@@ -53,6 +55,8 @@ cr_source <- function(clone1, clone2,...) {
 #' @importFrom grDevices adjustcolor
 #'
 #' @export
+#'
+#' @return No return value.
 #'
 #' @examples
 #' nt <- c("A", "G", "C", "T")

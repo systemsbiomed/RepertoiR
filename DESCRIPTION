@@ -14,8 +14,6 @@ Description: Provides visualization options of repertoire datasets
     development, hence new practices for data examination and assessment
     are crucial.
 License: MIT + file LICENSE
-URL: https://github.com/IdoHassonJ/RepertoireGraphs
-BugReports: https://github.com/IdoHassonJ/RepertoireGraphs/issues
 Imports: 
     circlize,
     grDevices,

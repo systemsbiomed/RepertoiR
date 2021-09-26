@@ -21,6 +21,9 @@ calculation: "osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine",
 
 \item{...}{Any additional arguments needed by the specialized methods.}
 }
+\value{
+No return value.
+}
 \description{
 Computes pairwise string distances among repertoire's sequences
 and visualize similar pairs as connected nodes, each sized by its frequency.

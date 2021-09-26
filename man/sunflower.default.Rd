@@ -15,6 +15,9 @@ node size.}
 
 \item{...}{Any other arguments.}
 }
+\value{
+No return value.
+}
 \description{
 Default visualization of sequence frequencies among samples as
 rings inside each other.

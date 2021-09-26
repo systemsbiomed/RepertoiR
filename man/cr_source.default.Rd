@@ -15,6 +15,9 @@ first vector.}
 
 \item{...}{Any other arguments.}
 }
+\value{
+No return value.
+}
 \description{
 Visualization of Two clones for their convergent recombination
 (CR) sources. Each sequence (NT) is represented as a colored bar (red for A,

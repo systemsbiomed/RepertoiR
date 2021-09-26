@@ -15,6 +15,8 @@
 #'
 #' @export
 #'
+#' @return No return value.
+#'
 #' @examples
 #'
 #' aa <- c(
@@ -68,6 +70,8 @@ network <- function(dataset, by, nrow, method, ...) {
 #' @importFrom grDevices rainbow
 #'
 #' @export
+#'
+#' @return No return value.
 #'
 #' @examples
 #' aa <- c(
