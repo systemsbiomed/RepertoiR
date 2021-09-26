@@ -117,7 +117,7 @@ network.default <- function(dataset, by = 1, nrow = 1000, method = "lv", ...) {
   pairs <- unique(melt(dist_d, varnames = c("seq1", "seq2"), na.rm = TRUE))
   pairs <- pairs[!is.na(pairs$value), ]
   # Generate the graph
-  g <- simplify(graph.data.frame(pairs, vertices=rownames(mat), directed=FALSE))
+  g <- simplify(graph.data.frame(pairs, vertices = rownames(mat), directed = FALSE))
   V(g)$size <- as.vector(mat[, by])
   lou <- cluster_louvain(g)
   l <- layout_with_fr(g)

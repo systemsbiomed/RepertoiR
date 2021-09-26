@@ -12,8 +12,10 @@ Description: Provides visualization options of repertoire datasets
     similar sequences and convergent recombination source presentation
     between species. Currently repertoire analysis is in early stage
     development, hence new practices for data examination and assessment
-    are crucial.
+    are crucial <https:...>.
 License: MIT + file LICENSE
+URL: https://github.com/IdoHassonJ/RepertoireGraphs
+BugReports: https://github.com/IdoHassonJ/RepertoireGraphs/issues
 Imports: 
     circlize,
     grDevices,
