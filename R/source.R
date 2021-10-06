@@ -18,8 +18,8 @@
 #'
 #' @examples
 #' nt <- c("A", "G", "C", "T")
-#' seq_len <- 20
-#' seq_n <- c(15, 19)
+#' seq_len <- 15
+#' seq_n <- c(12, 7)
 #'
 #' # Create data
 #' c1 <- replicate(seq_n[1],
@@ -60,8 +60,8 @@ cr_source <- function(clone1, clone2,...) {
 #'
 #' @examples
 #' nt <- c("A", "G", "C", "T")
-#' seq_len <- 20
-#' seq_n <- c(15, 19)
+#' seq_len <- 15
+#' seq_n <- c(12, 7)
 #'
 #' # Create data
 #' c1 <- replicate(seq_n[1],
