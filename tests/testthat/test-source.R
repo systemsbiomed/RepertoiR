@@ -1,6 +1,6 @@
 test_that("no error has occurred", {
   nt <- c("A", "G", "C", "T")
-  seq_len <- 20
+  seq_len <- 15
   seq_n <- c(15, 19)
   # Create data
   c1 <- replicate(seq_n[1],
