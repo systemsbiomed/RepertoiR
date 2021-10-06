@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/R-CMD-check/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
+[![.github/workflows/check-release.yaml](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/.github/workflows/check-release.yaml/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
+[![.github/workflows/render-rmarkdown.yaml](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/.github/workflows/render-rmarkdown.yaml/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
 <!-- badges: end -->
 
 Different methods to visualize your TCR/BCR repertoire output files of
