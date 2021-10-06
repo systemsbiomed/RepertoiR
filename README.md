@@ -4,6 +4,8 @@
 # RepertoireGraphs
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/R-CMD-check/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
 <!-- badges: end -->
 
 Different methods to visualize your TCR/BCR repertoire output files of
