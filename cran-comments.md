@@ -14,3 +14,13 @@ Maintainer: 'Ido Hasson <idoh@systemsbiomed.org>'
 New submission
 
 * This is a new release.
+
+
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Adding auto-linking in the description field of your DESCRIPTION file.
+
+* Adding \value to .Rd files regarding exported methods.
+
+* Example time adjustment.
