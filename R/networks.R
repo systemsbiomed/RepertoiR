@@ -3,6 +3,7 @@
 #' @description Computes pairwise string distances among repertoire's sequences
 #' and visualize similar pairs as connected nodes, each sized by its frequency.
 #'
+#'
 #' @param dataset A matrix or a data frame includes row names which are used as
 #' the compared sequences. Data set's numeric values determine node-size.
 #' @param ... Any additional arguments needed by the specialized methods.

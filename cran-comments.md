@@ -16,11 +16,18 @@ New submission
 * This is a new release.
 
 
-## Resubmission
+## Resubmission 1
 This is a resubmission. In this version I have:
 
-* Adding auto-linking in the description field of your DESCRIPTION file.
+* Added auto-linking in the description field of your DESCRIPTION file.
 
-* Adding \value to .Rd files regarding exported methods.
+* Added \value to .Rd files regarding exported methods.
 
 * Example time adjustment.
+
+
+## Resubmission 2
+This is a resubmission. In this version I have:
+
+* fixed the reference in the description file with auto-linking due to 
+  nonavailability at the moment.

@@ -2,17 +2,28 @@ Package: RepertoireGraphs
 Title: Repertoire Graphical Visualization
 Version: 0.0.1
 Authors@R: 
-    person(given = "Ido",
-           family = "Hasson",
-           role = c("aut", "cre"),
-           email = "idoh@systemsbiomed.org",
-           comment = c(ORCID = "0000-0001-8382-5638"))
-Description: Provides visualization options of repertoire datasets
-    including comparison of sequence frequency among samples, network of
-    similar sequences and convergent recombination source presentation
-    between species. Currently repertoire analysis is in early stage
-    development, hence new practices for data examination and assessment
-    are crucial. 'authors (year) <https:>'.
+    c(person(given = "Ido",
+             family = "Hasson",
+             role = c("aut", "cre"),
+             email = "idoh@systemsbiomed.org",
+             comment = c(ORCID = "0000-0001-8382-5638")),
+      person(given = "Sol",
+             family = "Efroni",
+             role = "aut"),
+      person(given = "Hagit",
+             family = "Philip",
+             role = "aut"),
+      person(given = "Alona",
+             family = "Zilberberg",
+             role = "aut"))
+Description: Visualization platform for T cell receptor repertoire
+    analysis output results. It includes comparison of sequence frequency
+    among samples, network of similar sequences and convergent
+    recombination source between species. Currently repertoire analysis is
+    in early stage of development and requires new approaches for
+    repertoire data examination and assessment as we intend to develope.
+    No publication is available yet (will be available in the near
+    future), Efroni (2021) <https:>.
 License: MIT + file LICENSE
 URL: https://github.com/IdoHassonJ/RepertoireGraphs
 BugReports: https://github.com/IdoHassonJ/RepertoireGraphs/issues
