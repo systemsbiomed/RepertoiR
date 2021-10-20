@@ -33,6 +33,7 @@ Imports:
     igraph,
     reshape2,
     stringdist,
+    stringi,
     stringr
 Suggests: 
     testthat (>= 3.0.0)
