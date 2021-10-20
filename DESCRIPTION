@@ -21,7 +21,7 @@ Description: Visualization platform for T cell receptor repertoire
     among samples, network of similar sequences and convergent
     recombination source between species. Currently repertoire analysis is
     in early stage of development and requires new approaches for
-    repertoire data examination and assessment as we intend to develope.
+    repertoire data examination and assessment as we intend to develop.
     No publication is available yet (will be available in the near
     future), Efroni (2021) <https:>.
 License: MIT + file LICENSE
