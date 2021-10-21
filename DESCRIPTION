@@ -25,8 +25,8 @@ Description: Visualization platform for T cell receptor repertoire
     No publication is available yet (will be available in the near
     future), Efroni (2021) <https:>.
 License: MIT + file LICENSE
-URL: https://github.com/IdoHassonJ/RepertoireGraphs
-BugReports: https://github.com/IdoHassonJ/RepertoireGraphs/issues
+URL: https://github.com/systemsbiomed/RepertoiR
+BugReports: https://github.com/systemsbiomed/RepertoiR/issues
 Imports: 
     circlize,
     grDevices,
