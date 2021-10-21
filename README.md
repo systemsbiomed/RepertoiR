@@ -1,20 +1,19 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # RepertoiR
 
-Different methods to visualize your TCR/BCR repertoire output files of
-various formats options, including a comparison of sequence frequency
-among samples, network representation of similar sequences and
-convergent recombination source between species.
+Visualization platform for T cell receptor repertoire analysis output results.
+It includes comparison of sequence frequency among samples, network of similar
+sequences and convergent recombination source between species. Currently 
+repertoire analysis is in early stage of development and requires new 
+approaches for repertoire data examination and assessment as we intend to 
+develop.
 
 ## Installation
 
-You can install the development version of RepertoireGraphs from version from GitHub with:
+You can install the development version of RepertoiR from version from GitHub with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("IdoHassonJ/RepertoireGraphs")
+devtools::install_github("systemsbiomed/RepertoiR")
 ```
 
 ## Quick demo
@@ -22,7 +21,7 @@ devtools::install_github("IdoHassonJ/RepertoireGraphs")
 Creating network graph of TCR repertoire’s clonotypes:
 
 ``` r
-library(RepertoireGraphs)
+library(RepertoiR)
 
 aa <- c(
   "G", "A", "V", "L", "I", "P", "F", "Y", "W", "S",

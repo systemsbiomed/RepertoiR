@@ -31,3 +31,5 @@ This is a resubmission. In this version I have:
 
 * fixed the reference in the description file with auto-linking due to 
   nonavailability at the moment.
+
+* note that package was renamed to 'RepertoiR' (originally 'RepertoireGraphs')
