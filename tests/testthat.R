@@ -1,4 +1,4 @@
 library(testthat)
-library(RepertoireGraphs)
+library(RepertoiR)
 
-test_check("RepertoireGraphs")
+test_check("RepertoiR")
