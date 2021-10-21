@@ -3,13 +3,6 @@
 
 # RepertoiR
 
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/R-CMD-check/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
-[![.github/workflows/check-release.yaml](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/.github/workflows/check-release.yaml/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
-[![.github/workflows/render-rmarkdown.yaml](https://github.com/IdoHassonJ/RepertoireGraphs/workflows/.github/workflows/render-rmarkdown.yaml/badge.svg)](https://github.com/IdoHassonJ/RepertoireGraphs/actions)
-<!-- badges: end -->
-
 Different methods to visualize your TCR/BCR repertoire output files of
 various formats options, including a comparison of sequence frequency
 among samples, network representation of similar sequences and
@@ -17,13 +10,7 @@ convergent recombination source between species.
 
 ## Installation
 
-<!-- You can install the released version of RepertoireGraphs from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("RepertoireGraphs") -->
-<!-- ``` -->
-
-You can install the development version of RepertoireGraphs from version
-from [GitHub](https://github.com/) with:
+You can install the development version of RepertoireGraphs from version from GitHub with:
 
 ``` r
 # install.packages("devtools")
