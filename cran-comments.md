@@ -33,3 +33,8 @@ This is a resubmission. In this version I have:
   nonavailability at the moment.
 
 * note that package was renamed to 'RepertoiR' (originally 'RepertoireGraphs')
+
+## Resubmission 3
+This is a resubmission. In this version I have:
+
+* removed non-standard file named 'desktop.ini'.
