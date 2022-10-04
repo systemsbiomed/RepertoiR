@@ -9,11 +9,10 @@ develop.
 
 ## Installation
 
-You can install the development version of RepertoiR from version from GitHub with:
+Direct installation of a recent version is available from The Comprehensive R Archive Network (CRAN):
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("systemsbiomed/RepertoiR")
+install.packages("RepertoiR")
 ```
 
 ## Quick demo
