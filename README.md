@@ -1,18 +1,16 @@
 # RepertoiR
 
-Visualization platform for T cell receptor repertoire analysis output results.
-It includes comparison of sequence frequency among samples, network of similar
-sequences and convergent recombination source between species. Currently 
-repertoire analysis is in early stage of development and requires new 
-approaches for repertoire data examination and assessment as we intend to 
-develop.
+R package for TCR repertoire data visualization
 
 ## Installation
 
-You can install the development version of RepertoiR from version from GitHub with:
+``` r
+install.packages("RepertoiR")
+```
+
+You can also install the development version of RepertoiR from version from GitHub with:
 
 ``` r
-# install.packages("devtools")
 devtools::install_github("systemsbiomed/RepertoiR")
 ```
 
